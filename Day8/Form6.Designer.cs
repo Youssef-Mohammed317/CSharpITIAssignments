@@ -34,10 +34,12 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1132, 569);
+            ClientSize = new Size(700, 569);
             Name = "Form6";
             Text = "Form6";
             Paint += Form6_Paint;
+            KeyDown += Form6_KeyDown;
+            KeyPress += Form6_KeyPress;
             ResumeLayout(false);
         }
 
