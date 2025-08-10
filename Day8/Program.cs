@@ -16,6 +16,11 @@ namespace Day8
             //Application.Run(new Form3());
             //Application.Run(new Form4());
             //Application.Run(new Form5());
+            
+            // Assignment 6 ball right and left only 
+            // Assignment 7 ball all directions
+            // Assignment 8 rectangle and ball game
+
             Application.Run(new Form6());
         }
     }
