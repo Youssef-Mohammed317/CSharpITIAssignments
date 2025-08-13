@@ -1,4 +1,8 @@
-﻿namespace Day10
+﻿
+using System.Runtime.CompilerServices;
+using System.Threading.Tasks;
+
+namespace Day10
 {
     internal class Program
     {
@@ -25,8 +29,8 @@
 
             //thread.IsBackground = true; 
             //main thread end thread even not ended
-            //default if main thread end wait new thread until end then end
             //if main thread end all child threads ends even not ended
+            //default if main thread end wait new thread until end then end
 
             //thread.Start();
 
@@ -61,11 +65,71 @@
 
             //thread.Start();
             //helper.PrintMsg();
+
+            //if there is an exception in new thread
+            //you cant catch it in main thread
+
             #endregion
 
             #region Tasks
+            //Task task = Task.Run(() => PrintX(1000)); // by default background
+
+            //task.Wait(); // not go to main thread until task ended
+
+            //PrintY();
+
+            //if there is an exception in the task 
+            //you can catch it and handle it in main thread
+            //you can also return value from task
+
+            //Task<int> task = Task.Run(() => myFun());
+            //TaskAwaiter<int> taskAwaiter = task.GetAwaiter();
+            //taskAwaiter.OnCompleted(Test);
+            //taskAwaiter.OnCompleted(() => Console.WriteLine($"Task Finished:Result:{taskAwaiter.GetResult()}"));
+            //Console.WriteLine("Any Thing Else....");
+
+            //Thread.Sleep(5000);
+
+            //int result = task.Result;
+            //Console.WriteLine(result);
+
+
+            //RunAsync();
+            //Console.WriteLine("Any Thing Else....");
+
+            //Thread.Sleep(5000); // wait until task end because task is background
 
             #endregion
+
+            // in windows form apps
+            // you cant access any control from thread which not created in it
+            // so you can use this.invoke() // take delegate which point to function works in main thread by this.invoke() which called in new thread
+            // this delegate not take any thing not return any thing
+        }
+
+        static public async Task RunAsync()
+        {
+            //Task<int> task = Task.Run(() => myFun());
+            //TaskAwaiter<int> taskAwaiter = task.GetAwaiter();
+            //taskAwaiter.OnCompleted(Test);
+            //taskAwaiter.OnCompleted(() => Console.WriteLine($"Task Finished:Result:{taskAwaiter.GetResult()}"));
+
+            //int result = await Task.Run(() => myFun()); // i not move from here until task ended
+            
+            //Console.WriteLine(result);
+
+            //Thread.Sleep(5000);
+
+            //int result = task.Result;
+            //Console.WriteLine(result);
+
+
+        }
+        static public int myFun()
+        {
+            Thread.Sleep(1000);
+            Console.WriteLine("Here....");
+            return 100;
         }
         // method 1
         static void Test()
@@ -99,10 +163,11 @@
         }
         static void PrintY()
         {
-            for (int i = 0; i < 1000; i++)
+            for (int i = 0; i < 10; i++)
             {
                 Console.Write("Y");
             }
         }
+
     }
 }
