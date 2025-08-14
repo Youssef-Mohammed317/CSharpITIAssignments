@@ -107,7 +107,31 @@ namespace Day12
 
             #endregion
 
+            #region Disconnected Mode
 
+            //sqlCommand.CommandText = "SELECT * FROM Employee";
+
+            //SqlDataAdapter adapter = new SqlDataAdapter(); // open|close connection, execute query
+
+            //adapter.SelectCommand = sqlCommand;
+                                
+            //DataTable dataTable = new DataTable();
+
+            //adapter.Fill(dataTable);
+
+            //foreach (DataRow row in dataTable.Rows)
+            //{
+            //    int ID = (int)row[0];
+            //    string FName = (string)row["EmpFname"];
+            //    string LName = (string)row[2];
+            //    int DeptID = (int)row["DeptNo"];
+            //    int Salary = (int)row[4];
+
+            //    Console.WriteLine($"ID: {ID}, First Name: {FName}, Last Name: {LName}, Department ID: {DeptID}, Salary: {Salary}");
+
+            //}
+
+            #endregion
         }
     }
 }

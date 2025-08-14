@@ -31,6 +31,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChatClient", "ChatClient\Ch
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day12", "Day12\Day12.csproj", "{CC6E1BE9-8FDD-42AD-8321-1DBE4071A37D}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Day12", "Day12", "{F8BDD8C5-A602-4F6E-8605-43D1D607E778}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -96,6 +98,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{40827EF6-1D82-4D80-A78C-C0A5A1709A47} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{F1E6087F-3463-4D01-B878-9CCCD3AAD654} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{CC6E1BE9-8FDD-42AD-8321-1DBE4071A37D} = {F8BDD8C5-A602-4F6E-8605-43D1D607E778}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4E7051AC-DBE2-4E07-BC8D-32EB2CB38EE9}
